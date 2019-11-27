@@ -10,7 +10,7 @@ The model can be employed with Pytorch > 0.4 by removing "align_corners=True" in
 The model maintains the similar API as the builtin models in torchvision like AlexNet
 
 To embed the model in your project or test script, you can place NASMP.py in your code file directory, and use the following statement to invoke the model:
-"
+  "
   from NASMP import NASMP
   ...
   model = NASMP(image_height, image_width, image_channel, image_class_number, GPU="cuda:0")
@@ -29,4 +29,4 @@ To embed the model in your project or test script, you can place NASMP.py in you
                     correct += (predicted.cpu() == labels).sum()
                     print ('Epoch [%d/%d], Iter [%d/%d] Loss: %.4f ACC: %.4f' 
                         %(epoch+1, num_epochs, i+1, len(train_dataset)//batch_size, loss.item(), (100 * correct / total)))
-"
+  "
