@@ -17,11 +17,11 @@ To embed the model in your project or test script, you can place NASMP.py in you
   GPU = "cuda:0"
   train_dataset = datasets.ImageFolder(...)
   train_loader = torch.utils.data.DataLoader(dataset, ...)
-  criterion = nn.CrossEntropyLoss()
-  optimizer = torch.optim.Adam(cnn.parameters(), lr=learning_rate)
   model = NASMP(image_height, image_width, image_channel, image_class_number, GPU=GPU)
   model.cuda(device=GPU)
   model.train()
+  criterion = nn.CrossEntropyLoss()
+  optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
   for epoch in range(num_epochs):
             correct = 0
             total = 0   
