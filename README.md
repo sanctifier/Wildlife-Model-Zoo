@@ -12,15 +12,19 @@ The model maintains the similar API as the builtin models in torchvision like Al
 To embed the model in your project or test script, you can place NASMP.py in your code file directory, and use the following statement to invoke the model:
   ```python
   from NASMP import NASMP
-
-  model = NASMP(image_height, image_width, image_channel, image_class_number, GPU="cuda:0")
+  GPU = "cuda:0"
+  model = NASMP(image_height, image_width, image_channel, image_class_number, GPU=GPU)
+  model.cuda(device=GPU)
+  model.train()
+  criterion = nn.CrossEntropyLoss()
+  optimizer = torch.optim.Adam(cnn.parameters(), lr=learning_rate)
   for epoch in range(num_epochs):
             correct = 0
             total = 0   
             for i, (images, labels) in enumerate(train_loader):                      
                 optimizer.zero_grad()
-                outputs = model(images.cuda())
-                loss = criterion(outputs, labels.cuda())
+                outputs = model(images.cuda(device=GPU))
+                loss = criterion(outputs, labels.cuda(device=GPU))
                 loss.backward()
                 optimizer.step()
                 if (i+1) % 100 == 0:
