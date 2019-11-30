@@ -1,4 +1,4 @@
-# Wildlife-Model-Zoo
+# Wildlife Model Zoo
 Pytorch implementations of models designed for wildlife identification
 
 NASMP.py contains the model proposed in paper "Neural Architecture Search Based on Model Pool for Wildlife Identification" submitted to Neurocomputing, the paper is still under review.
@@ -16,7 +16,7 @@ To embed the model in your project or test script, you can place NASMP.py in you
   from NASMP import NASMP
   GPU = "cuda:0"
   train_dataset = datasets.ImageFolder(...)
-  train_loader = torch.utils.data.DataLoader(dataset, ...)
+  train_loader = torch.utils.data.DataLoader(train_dataset, ...)
   model = NASMP(image_height, image_width, image_channel, image_class_number, GPU=GPU)
   model.cuda(device=GPU)
   model.train()
