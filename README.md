@@ -3,6 +3,8 @@ Pytorch implementations of models designed for wildlife identification
 
 NASMP.py contains the model proposed in paper "Neural Architecture Search Based on Model Pool for Wildlife Identification" submitted to Neurocomputing, the paper is still under review.
 
+NASMS.py contains the model proposed in paper "Neural Architecture Search Based on Model Statistics for Wildlife Identification" submitted to Journal of the Franklin Institute, the paper is still under review.
+
 Dependency requirements: math, collections, Pytorch > 1.1
 
 The model can be employed with Pytorch > 0.4 by removing "align_corners=True" in downsample()
