@@ -1,9 +1,9 @@
 # Wildlife Model Zoo
 Pytorch implementations of models designed for wildlife identification
 
-NASMP.py contains the model proposed in paper "Neural Architecture Search Based on Model Pool for Wildlife Identification" submitted to Neurocomputing, the paper is accepted and in press.
+NASMP.py contains the model proposed in paper "Neural Architecture Search Based on Model Pool for Wildlife Identification" submitted to Neurocomputing, the paper has been accepted and in press.
 
-NASMS.py contains the model proposed in paper "Neural Architecture Search Based on Model Statistics for Wildlife Identification" submitted to Journal of the Franklin Institute, the paper is is accepted and in press.
+NASMS.py contains the model proposed in paper "Neural Architecture Search Based on Model Statistics for Wildlife Identification" submitted to Journal of the Franklin Institute, the paper has been accepted and in press.
 
 Dependency requirements: math, collections, Pytorch > 1.1
 
